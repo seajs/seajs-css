@@ -1,0 +1,20 @@
+{
+  "family": "seajs",
+  "name": "seajs-css",
+  "version": "1.0.0",
+  "description": "A Sea.js plugin for load css",
+  "keywords": ["seajs", "plugin", "css"],
+  "author": "Frank Wang <lifesinger@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seajs/seajs-css.git"
+  },
+  "devDependencies": {
+    "seatools": "*"
+  },
+  "config": {
+    "plugin-concat": [
+      "seajs-css.js"
+    ]
+  }
+}

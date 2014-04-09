@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test</title>
+<script src="http://assets.spmjs.org/seajs/seajs/2.1.1/sea.js"></script>
+</head>
+<body>
+<div id="out"></div>
+<script>
+
+  seajs.config({
+    debug: true
+  })
+  seajs.use("../../dist/seajs-css", function() {
+    seajs.use("./main")
+  })
+
+</script>
+</body>
+</html>

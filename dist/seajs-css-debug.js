@@ -16,13 +16,16 @@ var interactiveScript
 //  - https://bugs.webkit.org/show_activity.cgi?id=38995
 //  - https://bugzilla.mozilla.org/show_bug.cgi?id=185236
 //  - https://developer.mozilla.org/en/HTML/Element/link#Stylesheet_load_events
-var isOldWebKit = +navigator.userAgent
-  .replace(/.*(?:AppleWebKit|AndroidWebKit)\/(\d+).*/, "$1") < 536
+var isOldWebKit = true
+if (+navigator.userAgent
+  .replace(/.*(?:AppleWebKit|AndroidWebKit)\/(\d+).*/, "$1") >= 536) {
+  isOldWebKit = false
+}
 
 function isFunction(obj) {
   return {}.toString.call(obj) == "[object Function]"
 }
-function request(url, callback, charset) {console.log(url)
+function request(url, callback, charset) {
   var isCSS = IS_CSS_RE.test(url)
   var node = doc.createElement(isCSS ? "link" : "script")
 
@@ -166,5 +169,5 @@ function getCurrentScript() {
 seajs.request = request
 
 
-define("seajs/seajs-css/1.0.0/seajs-css-debug", [], {});
+define("seajs/seajs-css/1.0.1/seajs-css-debug", [], {});
 })();

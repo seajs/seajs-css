@@ -22,7 +22,7 @@ var isOldWebKit = +navigator.userAgent
 function isFunction(obj) {
   return {}.toString.call(obj) == "[object Function]"
 }
-function request(url, callback, charset) {console.log(url)
+function request(url, callback, charset) {
   var isCSS = IS_CSS_RE.test(url)
   var node = doc.createElement(isCSS ? "link" : "script")
 
@@ -166,5 +166,5 @@ function getCurrentScript() {
 seajs.request = request
 
 
-define("seajs/seajs-css/1.0.0/seajs-css-debug", [], {});
+define("seajs/seajs-css/1.0.2/seajs-css-debug", [], {});
 })();

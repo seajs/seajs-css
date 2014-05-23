@@ -1,5 +1,4 @@
 {
-  "family": "seajs",
   "name": "seajs-css",
   "version": "1.0.2",
   "description": "A Sea.js plugin for load css",
@@ -11,6 +10,9 @@
   },
   "devDependencies": {
     "seatools": "*"
+  },
+  "spm": {
+    "main": "dist/seajs-css.js"
   },
   "config": {
     "plugin-concat": [

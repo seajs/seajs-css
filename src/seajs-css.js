@@ -144,6 +144,7 @@ seajs.request = request
 /**
  * util-path.js - The utilities for operating path such as id, uri
  */
+var data = seajs.data
 
 var DIRNAME_RE = /[^?#]*\//
 

@@ -2,6 +2,15 @@
  * util-request.js - The utilities for requesting script and style files
  * ref: tests/research/load-js-css/test.html
  */
+
+function isType(type) {
+  return function(obj) {
+    return {}.toString.call(obj) == "[object " + type + "]"
+  }
+}
+
+var isString = isType("String")
+
 var doc = document
 var head = doc.head || doc.getElementsByTagName("head")[0] || doc.documentElement
 var baseElement = head.getElementsByTagName("base")[0]
@@ -301,7 +310,7 @@ function id2Uri(id, refUri) {
 
 
 var doc = document
-var cwd = dirname(location.href)
+var cwd = (!location.href || location.href.indexOf('about:') === 0) ? '' : dirname(location.href)
 var scripts = doc.scripts
 
 // Recommend to add `seajsnode` id for the `sea.js` script element

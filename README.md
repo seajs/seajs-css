@@ -20,7 +20,7 @@ Usage
 
 <script>
 
-// seajs can load css file after loading style plugin.
+// seajs can load css file after loading css plugin.
 seajs.use("path/to/some.css")
 
 </script>
@@ -32,6 +32,6 @@ seajs.use("path/to/some.css")
 * 使用方法
   * 可以在sea.js标签后引入这个插件使用
   * 也可以将插件代码混入sea.js当中
-* 和seajs-style的区别
-  * seajs-css是加载一个纯css文件，和link标签一样
-  * seajs-style是指加载一段包裹成seajs.importStyle的css，文件是个js
+* 和`seajs-style`的区别
+  * `seajs-css`是使 Sea.js 能够加载一个css文件，和link标签一样
+  * `seajs-style`是指提供一个`seajs.importStyle`方法用于加载一段 css 字符串

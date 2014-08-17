@@ -17,7 +17,7 @@ var interactiveScript
 //  - https://bugzilla.mozilla.org/show_bug.cgi?id=185236
 //  - https://developer.mozilla.org/en/HTML/Element/link#Stylesheet_load_events
 var isOldWebKit = +navigator.userAgent
-  .replace(/.*(?:AppleWebKit|AndroidWebKit)\/(\d+).*/, "$1") < 536
+  .replace(/.*(?:AppleWebKit|AndroidWebKit)\/?(\d+).*/i, "$1") < 536
 
 function isFunction(obj) {
   return {}.toString.call(obj) == "[object Function]"
@@ -324,5 +324,5 @@ function getScriptAbsoluteSrc(node) {
 seajs.resolve = id2Uri
 
 
-define("seajs/seajs-css/1.0.3/seajs-css-debug", [], {});
+define("seajs/seajs-css/1.0.4/seajs-css-debug", [], {});
 })();

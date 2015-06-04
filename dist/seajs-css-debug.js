@@ -31,7 +31,7 @@ var isOldWebKit = +navigator.userAgent
 function isFunction(obj) {
   return {}.toString.call(obj) == "[object Function]"
 }
-function request(url, callback, charset) {
+function request(url, callback, charset, crossorigin) {
   var isCSS = IS_CSS_RE.test(url)
   var node = doc.createElement(isCSS ? "link" : "script")
 

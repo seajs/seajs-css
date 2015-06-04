@@ -42,6 +42,10 @@ function request(url, callback, charset) {
     }
   }
 
+  if (!isUndefined(crossorigin)) {
+    node.setAttribute("crossorigin", crossorigin)
+  }
+
   addOnload(node, callback, isCSS, url)
 
   if (isCSS) {
@@ -333,5 +337,5 @@ function getScriptAbsoluteSrc(node) {
 seajs.resolve = id2Uri
 
 
-define("seajs/seajs-css/1.0.4/seajs-css-debug", [], {});
+define("seajs/seajs-css/1.0.5/seajs-css-debug", [], {});
 })();

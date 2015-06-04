@@ -41,6 +41,10 @@ function request(url, callback, charset) {
     }
   }
 
+  if (!isUndefined(crossorigin)) {
+    node.setAttribute("crossorigin", crossorigin)
+  }
+
   addOnload(node, callback, isCSS, url)
 
   if (isCSS) {

@@ -42,7 +42,7 @@ function request(url, callback, charset) {
     }
   }
 
-  if (!isUndefined(crossorigin)) {
+  if (crossorigin !== void 0) {
     node.setAttribute("crossorigin", crossorigin)
   }
 
